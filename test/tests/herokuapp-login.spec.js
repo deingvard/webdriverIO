@@ -14,6 +14,6 @@ describe('Test for herokuapp login page', function() {
   });
 
   it('should validate the message after login ', function () {
-    assert.equal(landingPage.getMessage(), "Welcome to the Secure Area. When you are done click logout below.");
+    assert.strictEqual(landingPage.getMessage(), "Welcome to the Secure Area. When you are done click logout below.");
   });
 });
