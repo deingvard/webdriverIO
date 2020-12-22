@@ -113,17 +113,17 @@ exports.config = {
       'spec',
 
       ['allure', {
-          outputDir: './test/reports/allure-results',
+          outputDir: './reports/allure-results',
           disableWebdriverStepsReporting: true,
           disableWebdriverScreenshotsReporting: true,
       }],
 
       ['json', {
-        outputDir: './test/reports/json-results'
+        outputDir: './reports/json-results'
         }],
 
       ['junit', {
-        outputDir: './test/reports/junit-results',
+        outputDir: './reports/junit-results',
         outputFileFormat: function(options) {
               return `results-${options.cid}.${options.capabilities}.xml`
           }
