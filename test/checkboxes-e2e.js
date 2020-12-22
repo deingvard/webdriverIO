@@ -1,4 +1,3 @@
-import CheckboxesPage from '../pageobjects/CheckboxesPage'
 import CheckboxesSteps from '../steps/CheckboxesSteps'
 
 describe('E2E Tests', ()=> {
