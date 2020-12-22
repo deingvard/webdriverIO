@@ -10,7 +10,7 @@
     "allure:history": "mkdir -p allure-report/history ./test/reports/allure-results/history && cp -a allure-report/history ./test/reports/allure-results/",
     "allure-report": "node_modules/.bin/allure generate --clean ./test/reports/allure-results && allure open",
     "junit-report": "node_modules/.bin/junit-viewer --results=./test/reports/junit-results --save=junit-results.html && open junit-results.html",
-    "test-local": "npm run allure:history && wdio ./test/config/wdio.local.conf.js"
+    "test-local": "npm run allure:history && wdio config/wdio.local.conf.js"
   },
   "keywords": [
     "selenium",

@@ -1,16 +1,17 @@
-import CheckboxPage from '../pageobjects/checkbox.page'
+import CheckboxPage from '../../pageobjects/Checkbox.page'
 
 describe('checkboxes', function () {
     it('checkbox 2 should be enabled', function () {
         CheckboxPage.open()
-        expect(CheckboxPage.firstCheckbox).not.toBeSelected()
-        expect(CheckboxPage.lastCheckbox).toBeSelected()
+        CheckboxPage.verifyFirstCheckboxNotSelected()
+        CheckboxPage.verifyLastCheckboxSelected()
     })
 
     it('checkbox 1 should be enabled after clicking on it', function () {
         CheckboxPage.open()
-        expect(CheckboxPage.firstCheckbox).not.toBeSelected()
-        CheckboxPage.firstCheckbox.click()
-        expect(CheckboxPage.firstCheckbox).toBeSelected()
+        CheckboxPage.verifyFirstCheckboxNotSelected()
+        CheckboxPage.clickFirstCheckbox()
+        CheckboxPage.verifyFirstCheckboxSelected()
+        browser.pause(3000);
     })
 })

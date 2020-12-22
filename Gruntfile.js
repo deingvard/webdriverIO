@@ -12,6 +12,4 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-mocha');
     grunt.loadNpmTasks('grunt-webdriver');
     grunt.registerTask('default', ['webdriver:test-local']);
-    // grunt.registerTask('default', ['webdriver:test-sauce']);
-    // grunt.registerTask('default', ['test-browserstack']);
 };
