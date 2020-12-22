@@ -1,29 +1,29 @@
 import CheckboxesPage from "../pageobjects/CheckboxesPage"
 import Page from "../pageobjects/Page";
 
-class CheckboxesSteps extends Page{
+class CheckboxesSteps extends Page {
 
     /**
      * define or overwrite page methods
      */
-    open_page () {
+    open_page() {
         browser.maximizeWindow()
         super.open('checkboxes')
     }
 
-    clickFirstCheckbox(){
-         CheckboxesPage.firstCheckbox.click()
+    clickFirstCheckbox() {
+        CheckboxesPage.firstCheckbox.click()
     }
 
-    verifyFirstCheckboxNotSelected(){
+    verifyFirstCheckboxNotSelected() {
         expect(CheckboxesPage.firstCheckbox).not.toBeSelected()
     }
 
-    verifyLastCheckboxSelected(){
+    verifyLastCheckboxSelected() {
         expect(CheckboxesPage.lastCheckbox).toBeSelected()
     }
 
-    verifyFirstCheckboxSelected(){
+    verifyFirstCheckboxSelected() {
         expect(CheckboxesPage.firstCheckbox).toBeSelected()
     }
 }
